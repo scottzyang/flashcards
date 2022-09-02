@@ -21,6 +21,8 @@ with open('me-capitals.json', 'r') as f: # open json file to read, contents of f
 # for i in data["cards"]:
     # print(i)
 
+total_questions = len(data["cards"])
+
 # define function for flashcard game
 def flash_cards():
     score = 0
@@ -35,7 +37,7 @@ def flash_cards():
         else:
             print("Incorrect! the answer was", i["a"])
 
-    print(f"Your score was {score} out of 5!")
+    print(f"Your score was {score} out of {total_questions}!")
 
     # request user input if they would like to play again
     play_again = input("Would you like to play again? (Yes or No) ")
